@@ -1,99 +1,72 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getDictionary } from "@/dictionaries";
+import { i18n } from "@/app/i18n-config";
+import "../styles";
 
-export default function Features() {
+export default async function Features() {
+  // Utiliser la langue par défaut pour cette démo
+  const locale = i18n.defaultLocale;
+  const dict = await getDictionary(locale);
+  const { hero, events, jobs, feed, cta } = dict.features;
+
   return (
     <main>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-700 to-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-            Des fonctionnalités pour tous les passionnés
+      <section className="features-hero">
+        <div className="features-hero-container">
+          <h1 className="features-hero-title">
+            {hero.title}
           </h1>
-          <p className="text-xl mb-10 max-w-3xl mx-auto text-indigo-100">
-            Découvrez comment GearConnect transforme votre expérience automobile
-            avec des outils conçus pour les véritables passionnés.
+          <p className="features-hero-description">
+            {hero.description}
           </p>
         </div>
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="features-grid">
+        <div className="features-grid-container">
 
           {/* Feature 1 - Events */}
-          <div className="flex flex-col-reverse md:flex-row items-center mb-20">
-            <div className="md:w-1/2 md:pr-12 mt-10 md:mt-0">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Participez à des événements automobiles
+          <div className="feature-row">
+            <div className="feature-content">
+              <h2 className="feature-title">
+                {events.title}
               </h2>
-              <p className="text-black mb-6">
-                Créez et participez à des rencontres, rallyes, expositions et
-                journées circuit. GearConnect vous permet de découvrir des événements
-                près de chez vous et de rencontrer d&apos;autres passionnés en personne.
+              <p className="feature-description">
+                {events.description}
               </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <svg
-                    className="h-6 w-6 text-indigo-700 mr-2 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                  <span className="text-black">
-                    Découverte d&apos;événements près de chez vous
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="h-6 w-6 text-indigo-700 mr-2 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                  <span className="text-black">
-                    Organisation et participation aux rencontres
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="h-6 w-6 text-indigo-700 mr-2 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                  <span className="text-black">
-                    Partage de souvenirs après les événements
-                  </span>
-                </li>
+              <ul className="feature-list">
+                {events.features.map((feature: string, index: number) => (
+                  <li key={index} className="feature-list-item">
+                    <svg
+                      className="feature-list-icon"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                    <span className="feature-list-text">
+                      {feature}
+                    </span>
+                  </li>
+                ))}
               </ul>
               <Link
                 href="/download"
-                className="inline-block bg-indigo-700 text-white hover:bg-indigo-800 py-3 px-8 rounded-lg font-medium shadow-md"
+                className="feature-cta"
               >
-                Découvrir les événements
+                {events.ctaText}
               </Link>
             </div>
-            <div className="md:w-1/2 shadow-lg rounded-lg overflow-hidden">
-              <div className="relative h-80 md:h-96 w-full">
+            <div className="feature-image-container">
+              <div className="feature-image-wrapper">
                 <Image
                   src="/images/events.jpg"
                   alt="Événements automobiles"
@@ -105,9 +78,9 @@ export default function Features() {
           </div>
 
           {/* Feature 2 - Jobs */}
-          <div className="flex flex-col md:flex-row items-center mb-20">
-            <div className="md:w-1/2 shadow-lg rounded-lg overflow-hidden">
-              <div className="relative h-80 md:h-96 w-full">
+          <div className="feature-row-reverse">
+            <div className="feature-image-container">
+              <div className="feature-image-wrapper">
                 <Image
                   src="/images/jobs.jpg"
                   alt="Opportunités d'emploi automobile"
@@ -116,150 +89,82 @@ export default function Features() {
                 />
               </div>
             </div>
-            <div className="md:w-1/2 md:pl-12 mt-10 md:mt-0">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Trouvez un emploi dans l&apos;automobile
+            <div className="feature-content-right">
+              <h2 className="feature-title">
+                {jobs.title}
               </h2>
-              <p className="text-black mb-6">
-                Passez de la passion au métier! Notre section emploi vous met en relation 
-                avec des entreprises du secteur automobile qui recrutent. Consultez les 
-                offres d&apos;emploi et faites décoller votre carrière dans l&apos;univers automobile.
+              <p className="feature-description">
+                {jobs.description}
               </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <svg
-                    className="h-6 w-6 text-indigo-700 mr-2 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                  <span className="text-black">
-                    Offres d&apos;emploi exclusives dans le secteur automobile
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="h-6 w-6 text-indigo-700 mr-2 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                  <span className="text-black">
-                    Mise en relation directe avec les recruteurs
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="h-6 w-6 text-indigo-700 mr-2 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                  <span className="text-black">
-                    Conseils pour postuler dans le secteur automobile
-                  </span>
-                </li>
+              <ul className="feature-list">
+                {jobs.features.map((feature: string, index: number) => (
+                  <li key={index} className="feature-list-item">
+                    <svg
+                      className="feature-list-icon"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                    <span className="feature-list-text">
+                      {feature}
+                    </span>
+                  </li>
+                ))}
               </ul>
               <Link
                 href="/download"
-                className="inline-block bg-indigo-700 text-white hover:bg-indigo-800 py-3 px-8 rounded-lg font-medium shadow-md"
+                className="feature-cta"
               >
-                Explorer les offres d&apos;emploi
+                {jobs.ctaText}
               </Link>
             </div>
           </div>
 
           {/* Feature 3 - Fil d'actualité */}
-          <div className="flex flex-col-reverse md:flex-row items-center mb-20">
-            <div className="md:w-1/2 md:pr-12 mt-10 md:mt-0">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Fil d&apos;actualité entre passionnés
+          <div className="feature-row">
+            <div className="feature-content">
+              <h2 className="feature-title">
+                {feed.title}
               </h2>
-              <p className="text-black mb-6">
-                Échangez avec d&apos;autres passionnés d&apos;automobile sur un fil d&apos;actualité
-                dédié. Partagez vos expériences, photos de vos véhicules et sujets qui
-                vous passionnent avec une communauté qui partage votre passion.
+              <p className="feature-description">
+                {feed.description}
               </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <svg
-                    className="h-6 w-6 text-indigo-700 mr-2 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                  <span className="text-black">
-                    Publications et discussions en temps réel
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="h-6 w-6 text-indigo-700 mr-2 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                  <span className="text-black">
-                    Partage de photos et vidéos de vos véhicules
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="h-6 w-6 text-indigo-700 mr-2 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                  <span className="text-black">
-                    Actualités du monde automobile personnalisées
-                  </span>
-                </li>
+              <ul className="feature-list">
+                {feed.features.map((feature: string, index: number) => (
+                  <li key={index} className="feature-list-item">
+                    <svg
+                      className="feature-list-icon"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                    <span className="feature-list-text">
+                      {feature}
+                    </span>
+                  </li>
+                ))}
               </ul>
               <Link
                 href="/download"
-                className="inline-block bg-indigo-700 text-white hover:bg-indigo-800 py-3 px-8 rounded-lg font-medium shadow-md"
+                className="feature-cta"
               >
-                Découvrir le fil d&apos;actualité
+                {feed.ctaText}
               </Link>
             </div>
-            <div className="md:w-1/2 shadow-lg rounded-lg overflow-hidden">
-              <div className="relative h-80 md:h-96 w-full">
+            <div className="feature-image-container">
+              <div className="feature-image-wrapper">
                 <Image
                   src="/images/filActu.jpg"
                   alt="Fil d'actualité automobile"
@@ -273,22 +178,20 @@ export default function Features() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-indigo-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Prêt à rejoindre la communauté automobile ?
+      <section className="features-cta">
+        <div className="features-cta-container">
+          <h2 className="features-cta-title">
+            {cta.title}
           </h2>
-          <p className="text-black text-xl mb-10 max-w-3xl mx-auto">
-            Téléchargez GearConnect dès maintenant et connectez-vous avec des
-            milliers de passionnés d&apos;automobile. L&apos;application est gratuite et
-            disponible sur iOS et Android.
+          <p className="features-cta-description">
+            {cta.description}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <div className="features-cta-button-container">
             <Link
               href="/download"
-              className="inline-flex items-center justify-center bg-indigo-700 text-white hover:bg-indigo-800 py-3 px-8 rounded-lg font-medium shadow-md"
+              className="features-cta-button"
             >
-              Télécharger
+              {cta.buttonText}
             </Link>
           </div>
         </div>

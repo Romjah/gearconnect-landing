@@ -108,7 +108,7 @@ export default function Contact() {
                   <input
                     type="checkbox"
                     id="privacy"
-                    className="mt-1 h-4 w-4 text-indigo-700 focus:ring-indigo-700 border-gray-300 rounded text-black"
+                    className="mt-1 h-4 w-4 focus:ring-indigo-700 border-gray-300 rounded text-black"
                   />
                   <label htmlFor="privacy" className="ml-2 block text-black">
                     J&apos;accepte que GearConnect utilise mes données conformément à la politique de confidentialité.

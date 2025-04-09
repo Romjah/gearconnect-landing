@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gearconnect-landing.vercel.app'),
@@ -52,10 +57,6 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
     },
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
   },
   verification: {
     google: 'google-site-verification',
