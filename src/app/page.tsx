@@ -149,13 +149,13 @@ export default function Home() {
                 <div className="space-y-6">
                   <div className="border-l-4 border-indigo-700 pl-4 py-2">
                     <p className="italic text-black mb-2">
-                      "GearConnect allowed me to meet other BMW M3 enthusiasts in my area. A true community of passionate people!"
+                      &quot;GearConnect allowed me to meet other BMW M3 enthusiasts in my area. A true community of passionate people!&quot;
                     </p>
                     <p className="text-gray-900 font-medium">- Tom L., Collector</p>
                   </div>
                   <div className="border-l-4 border-indigo-700 pl-4 py-2">
                     <p className="italic text-black mb-2">
-                      "I discovered amazing car meets thanks to GearConnect. The best social network for car enthusiasts."
+                      &quot;I discovered amazing car meets thanks to GearConnect. The best social network for car enthusiasts.&quot;
                     </p>
                     <p className="text-gray-900 font-medium">- Mary D., Amateur Driver</p>
                   </div>
