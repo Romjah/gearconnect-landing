@@ -26,18 +26,13 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/op-image.jpg",
         width: 1200,
         height: 630,
         alt: "GearConnect - Communauté Sport Automobile"
       }
     ]
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "GearConnect - Le réseau social du sport automobile",
-    description: "Partagez vos expériences sur circuit, échangez avec d'autres pilotes et vivez votre passion à fond !",
-  }
 };
 
 export default function RootLayout({
