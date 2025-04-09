@@ -1,5 +1,3 @@
-import { getDictionary } from "@/dictionaries";
-import { i18n } from "@/app/i18n-config";
 import "../styles";
 
 // Importer les composants
@@ -8,10 +6,53 @@ import FeatureSection from "../components/feature/FeatureSection";
 import FeaturesCta from "../components/feature/FeaturesCta";
 
 export default async function Features() {
-  // Utiliser la langue par défaut pour cette démo
-  const locale = i18n.defaultLocale;
-  const dict = await getDictionary(locale);
-  const { hero, events, jobs, feed, cta } = dict.features;
+  // Contenu statique
+  const hero = {
+    title: "Découvrez GearConnect",
+    description: "Une plateforme complète pour les passionnés d'automobile"
+  };
+  
+  const events = {
+    title: "Événements",
+    description: "Restez informé des événements automobiles à venir dans votre région",
+    features: [
+      "Salons automobiles",
+      "Expositions de voitures classiques",
+      "Courses et rallyes",
+      "Rencontres de clubs"
+    ],
+    ctaText: "Explorer les événements"
+  };
+  
+  const jobs = {
+    title: "Opportunités d'emploi",
+    description: "Trouvez votre prochain poste dans l'industrie automobile",
+    features: [
+      "Mécanicien",
+      "Vendeur",
+      "Design automobile",
+      "Ingénierie"
+    ],
+    ctaText: "Voir les offres"
+  };
+  
+  const feed = {
+    title: "Fil d'actualité",
+    description: "Restez à jour avec les dernières nouvelles et tendances du monde automobile",
+    features: [
+      "Actualités",
+      "Critiques de véhicules",
+      "Innovations technologiques",
+      "Conseils d'entretien"
+    ],
+    ctaText: "Lire les dernières actualités"
+  };
+  
+  const cta = {
+    title: "Prêt à rejoindre la communauté?",
+    description: "Téléchargez l'application GearConnect dès aujourd'hui et connectez-vous avec d'autres passionnés d'automobile.",
+    buttonText: "Télécharger maintenant"
+  };
 
   return (
     <main>

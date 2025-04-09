@@ -1,6 +1,3 @@
-import { getDictionary } from "@/dictionaries";
-import { i18n } from "@/app/i18n-config";
-
 // Importer les composants
 import DownloadHero from "../components/download/DownloadHero";
 import DownloadOption from "../components/download/DownloadOption";
@@ -9,10 +6,58 @@ import Testimonials from "../components/contact/Testimonials";
 import HelpSection from "../components/contact/HelpSection";
 
 export default async function Download() {
-  // Utiliser la langue par défaut pour cette démo
-  const locale = i18n.defaultLocale;
-  const dict = await getDictionary(locale);
-  const { hero, iosApp, androidApp, qrCode, testimonials, help } = dict.download;
+  // Contenu statique
+  const hero = {
+    title: "Téléchargez GearConnect",
+    description: "Disponible sur iOS et Android"
+  };
+  
+  const iosApp = {
+    title: "iOS App",
+    description: "Téléchargez GearConnect pour iPhone et iPad depuis l'App Store",
+    buttonText: "Télécharger sur l'App Store"
+  };
+  
+  const androidApp = {
+    title: "Android App",
+    description: "Téléchargez GearConnect pour votre appareil Android depuis Google Play",
+    buttonText: "Télécharger sur Google Play"
+  };
+  
+  const qrCode = {
+    title: "Scanner pour télécharger",
+    description: "Scannez ce code QR avec votre téléphone pour télécharger directement l'application"
+  };
+  
+  const testimonials = {
+    title: "Ce que disent nos utilisateurs",
+    items: [
+      {
+        initial: "M",
+        name: "Michel Dupont",
+        role: "Propriétaire de garage",
+        text: "GearConnect a transformé la façon dont je gère mon garage. Je peux facilement trouver des pièces, communiquer avec des clients et rester à jour sur les tendances du marché."
+      },
+      {
+        initial: "S",
+        name: "Sophie Martin",
+        role: "Passionnée d'automobile",
+        text: "J'adore pouvoir me connecter avec d'autres passionnés et découvrir des événements automobiles dans ma région. L'interface est intuitive et les fonctionnalités sont exactement ce dont j'avais besoin."
+      },
+      {
+        initial: "L",
+        name: "Luc Bernard",
+        role: "Mécanicien",
+        text: "En tant que mécanicien, GearConnect est devenu mon outil indispensable. Je peux facilement trouver des informations techniques et échanger avec mes pairs."
+      }
+    ]
+  };
+  
+  const help = {
+    title: "Besoin d'aide?",
+    description: "Notre équipe est là pour vous aider à tirer le meilleur parti de GearConnect",
+    buttonText: "Contactez-nous"
+  };
 
   // Créer des composants d'icônes SVG pour iOS et Android
   const AppleIcon = (
