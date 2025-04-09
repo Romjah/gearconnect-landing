@@ -9,10 +9,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-10 md:mb-0">
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
-                Connectez-vous avec les passionnés d&apos;automobile
+                Connectez-vous avec les passionnés de sport automobile
               </h1>
               <p className="text-xl mb-8 text-indigo-100">
-                GearConnect, le premier réseau social dédié aux passionnés d&apos;automobile. Partagez, échangez et découvrez des véhicules d&apos;exception.
+                GearConnect, le premier réseau social dédié aux passionnés de sport automobile. Partagez vos expériences sur circuit, échangez avec d&apos;autres pilotes et vivez votre passion à fond !
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Link 

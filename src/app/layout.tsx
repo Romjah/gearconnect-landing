@@ -17,8 +17,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GearConnect - Connectez vos équipements",
-  description: "Application pour gérer et connecter vos équipements",
+  title: "GearConnect - Le réseau social du sport automobile",
+  description: "Rejoignez la communauté GearConnect et partagez votre passion pour le sport automobile. Événements, rencontres et actualités du monde du racing.",
+  keywords: "sport automobile, réseau social, racing, motorsport, événements automobiles, communauté pilotes, circuit automobile",
+  openGraph: {
+    title: "GearConnect - Le réseau social du sport automobile",
+    description: "Partagez vos expériences sur circuit, échangez avec d'autres pilotes et vivez votre passion à fond ! Rejoignez la communauté GearConnect.",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "GearConnect - Communauté Sport Automobile"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GearConnect - Le réseau social du sport automobile",
+    description: "Partagez vos expériences sur circuit, échangez avec d'autres pilotes et vivez votre passion à fond !",
+  }
 };
 
 export default function RootLayout({
