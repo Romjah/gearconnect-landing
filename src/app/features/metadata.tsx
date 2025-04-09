@@ -1,16 +1,16 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fonctionnalités - GearConnect",
-  description: "Découvrez toutes les fonctionnalités de GearConnect, le réseau social dédié aux passionnés d'automobile.",
+  title: "Features - GearConnect",
+  description: "Discover all the features of GearConnect, the social network dedicated to automotive enthusiasts.",
   openGraph: {
-    title: "Fonctionnalités de GearConnect - Le réseau social du sport automobile",
-    description: "Découvrez les événements, offres d'emploi et discussions entre passionnés d'automobile.",
+    title: "GearConnect Features - The Motorsport Social Network",
+    description: "Discover events, job opportunities, and discussions between automotive enthusiasts.",
     images: [{
       url: '/images/features-og.jpg',
       width: 1200,
       height: 630,
-      alt: 'Fonctionnalités de GearConnect',
+      alt: 'GearConnect Features',
     }],
   },
 }; 

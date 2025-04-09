@@ -1,68 +1,68 @@
-// Importer les composants
+// Import components
 import ContactHero from "../components/contact/ContactHero";
 import ContactForm from "../components/contact/ContactForm";
 import ContactInfo from "../components/contact/ContactInfo";
 import ContactFaq from "../components/contact/ContactFaq";
 
 export default async function Contact() {
-  // Contenu statique
+  // Static content
   const hero = {
-    title: "Contactez-nous",
-    description: "Vous avez des questions? Nous sommes là pour vous aider"
+    title: "Contact Us",
+    description: "Have questions? We're here to help"
   };
 
   const form = {
-    title: "Envoyez-nous un message",
-    description: "Nous vous répondrons dans les meilleurs délais",
-    submitButtonText: "Envoyer"
+    title: "Send us a message",
+    description: "We'll get back to you as soon as possible",
+    submitButtonText: "Send"
   };
 
   const info = {
-    title: "Informations de contact",
-    description: "Plusieurs façons de nous contacter",
+    title: "Contact Information",
+    description: "Multiple ways to reach us",
     email: {
       title: "Email",
       address: "contact@gearconnect.com",
-      description: "Notre équipe vous répond sous 24h"
+      description: "Our team responds within 24 hours"
     },
     phone: {
-      title: "Téléphone",
-      number: "+33 1 23 45 67 89",
-      description: "Du lundi au vendredi, 9h-18h"
+      title: "Phone",
+      number: "+1 (555) 123-4567",
+      description: "Monday to Friday, 9am-6pm"
     },
     address: {
-      title: "Adresse",
-      line1: "123 Avenue des Passionnés",
-      line2: "75008 Paris, France"
+      title: "Address",
+      line1: "123 Automotive Drive",
+      line2: "Detroit, MI 48201, USA"
     },
     hours: {
-      title: "Heures d'ouverture",
-      line1: "Lundi-Vendredi: 9h-18h",
-      line2: "Samedi: 10h-16h"
+      title: "Hours",
+      line1: "Monday-Friday: 9am-6pm",
+      line2: "Saturday: 10am-4pm"
     },
     social: {
-      title: "Réseaux sociaux"
+      title: "Social Media"
     }
   };
 
   const faq = {
-    title: "Questions fréquentes",
+    title: "Frequently Asked Questions",
     items: [
       {
-        question: "Comment télécharger l'application GearConnect?",
-        answer: "L'application GearConnect est disponible sur l'App Store et Google Play. Vous pouvez la télécharger en visitant notre page de téléchargement."
+        question: "How do I download the GearConnect app?",
+        answer: "The GearConnect app is available on the App Store and Google Play. You can download it by visiting our download page."
       },
       {
-        question: "L'application est-elle gratuite?",
-        answer: "Oui, l'application GearConnect est entièrement gratuite à télécharger et à utiliser. Des fonctionnalités premium sont disponibles via un abonnement mensuel ou annuel."
+        question: "Is the app free to use?",
+        answer: "Yes, the GearConnect app is completely free to download and use. Premium features are available through monthly or annual subscriptions."
       },
       {
-        question: "Comment puis-je signaler un problème technique?",
-        answer: "Vous pouvez signaler un problème technique en utilisant le formulaire de contact sur cette page ou directement depuis l'application dans la section 'Aide'."
+        question: "How can I report a technical issue?",
+        answer: "You can report technical issues using the contact form on this page or directly from the app in the 'Help' section."
       }
     ],
-    ctaText: "Vous avez d'autres questions?",
-    ctaButtonText: "Contactez-nous"
+    ctaText: "Have more questions?",
+    ctaButtonText: "Contact Us"
   };
 
   return (

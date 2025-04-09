@@ -10,52 +10,52 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">GearConnect</h3>
             <p className="text-black text-sm">
-              Le réseau social qui connecte les passionnés d&apos;automobile du monde entier.
+              The social network connecting automotive enthusiasts from around the world.
             </p>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Liens rapides</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/" className="text-black hover:text-indigo-700">
-                  Accueil
+                  Home
                 </Link>
               </li>
               <li>
                 <Link href="/features" className="text-black hover:text-indigo-700">
-                  Fonctionnalités
+                  Features
                 </Link>
               </li>
               <li>
                 <Link href="/download" className="text-black hover:text-indigo-700">
-                  Télécharger
+                  Download
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Communauté</h3>
+            <h3 className="text-lg font-semibold mb-4">Community</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/features#feed" className="text-black hover:text-indigo-700">
-                  Fil d&apos;actualité
+                  News Feed
                 </Link>
               </li>
               <li>
                 <Link href="/features#events" className="text-black hover:text-indigo-700">
-                  Événements
+                  Events
                 </Link>
               </li>
               <li>
                 <Link href="/features#groups" className="text-black hover:text-indigo-700">
-                  Groupes de passionnés
+                  Enthusiast Groups
                 </Link>
               </li>
               <li>
                 <Link href="/features#jobs" className="text-black hover:text-indigo-700">
-                  Emplois automobiles
+                  Automotive Jobs
                 </Link>
               </li>
             </ul>
@@ -66,7 +66,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/contact" className="text-black hover:text-indigo-700">
-                  Nous contacter
+                  Contact Us
                 </Link>
               </li>
               <li className="text-black">
@@ -100,14 +100,14 @@ export default function Footer() {
         
         <div className="border-t border-indigo-100 mt-8 pt-8 flex flex-col md:flex-row justify-between">
           <p className="text-black text-sm">
-            &copy; {new Date().getFullYear()} GearConnect. Tous droits réservés.
+            &copy; {new Date().getFullYear()} GearConnect. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="/privacy" className="text-black hover:text-indigo-700 text-sm">
-              Politique de confidentialité
+              Privacy Policy
             </Link>
             <Link href="/terms" className="text-black hover:text-indigo-700 text-sm">
-              Conditions d&apos;utilisation
+              Terms of Use
             </Link>
           </div>
         </div>

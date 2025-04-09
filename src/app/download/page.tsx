@@ -1,4 +1,4 @@
-// Importer les composants
+// Import components
 import DownloadHero from "../components/download/DownloadHero";
 import DownloadOption from "../components/download/DownloadOption";
 import QrCodeSection from "../components/download/QrCodeSection";
@@ -6,60 +6,60 @@ import Testimonials from "../components/contact/Testimonials";
 import HelpSection from "../components/contact/HelpSection";
 
 export default async function Download() {
-  // Contenu statique
+  // Static content
   const hero = {
-    title: "Téléchargez GearConnect",
-    description: "Disponible sur iOS et Android"
+    title: "Download GearConnect",
+    description: "Available on iOS and Android"
   };
   
   const iosApp = {
     title: "iOS App",
-    description: "Téléchargez GearConnect pour iPhone et iPad depuis l'App Store",
-    buttonText: "Télécharger sur l'App Store"
+    description: "Download GearConnect for iPhone and iPad from the App Store",
+    buttonText: "Download on the App Store"
   };
   
   const androidApp = {
     title: "Android App",
-    description: "Téléchargez GearConnect pour votre appareil Android depuis Google Play",
-    buttonText: "Télécharger sur Google Play"
+    description: "Download GearConnect for your Android device from Google Play",
+    buttonText: "Download on Google Play"
   };
   
   const qrCode = {
-    title: "Scanner pour télécharger",
-    description: "Scannez ce code QR avec votre téléphone pour télécharger directement l'application"
+    title: "Scan to download",
+    description: "Scan this QR code with your phone to directly download the app"
   };
   
   const testimonials = {
-    title: "Ce que disent nos utilisateurs",
+    title: "What our users say",
     items: [
       {
         initial: "M",
-        name: "Michel Dupont",
-        role: "Propriétaire de garage",
-        text: "GearConnect a transformé la façon dont je gère mon garage. Je peux facilement trouver des pièces, communiquer avec des clients et rester à jour sur les tendances du marché."
+        name: "Mike Johnson",
+        role: "Garage Owner",
+        text: "GearConnect has transformed how I manage my garage. I can easily find parts, communicate with customers, and stay updated on market trends."
       },
       {
         initial: "S",
-        name: "Sophie Martin",
-        role: "Passionnée d'automobile",
-        text: "J'adore pouvoir me connecter avec d'autres passionnés et découvrir des événements automobiles dans ma région. L'interface est intuitive et les fonctionnalités sont exactement ce dont j'avais besoin."
+        name: "Sarah Williams",
+        role: "Automotive Enthusiast",
+        text: "I love being able to connect with other enthusiasts and discover automotive events in my area. The interface is intuitive and the features are exactly what I needed."
       },
       {
         initial: "L",
-        name: "Luc Bernard",
-        role: "Mécanicien",
-        text: "En tant que mécanicien, GearConnect est devenu mon outil indispensable. Je peux facilement trouver des informations techniques et échanger avec mes pairs."
+        name: "Luke Parker",
+        role: "Mechanic",
+        text: "As a mechanic, GearConnect has become my indispensable tool. I can easily find technical information and exchange with my peers."
       }
     ]
   };
   
   const help = {
-    title: "Besoin d'aide?",
-    description: "Notre équipe est là pour vous aider à tirer le meilleur parti de GearConnect",
-    buttonText: "Contactez-nous"
+    title: "Need help?",
+    description: "Our team is here to help you get the most out of GearConnect",
+    buttonText: "Contact Us"
   };
 
-  // Créer des composants d'icônes SVG pour iOS et Android
+  // Create SVG icon components for iOS and Android
   const AppleIcon = (
     <svg viewBox="0 0 384 512" className="h-12 w-12 text-white">
       <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>

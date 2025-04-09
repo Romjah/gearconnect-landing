@@ -2,10 +2,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact - GearConnect",
-  description: "Contactez l'équipe GearConnect pour toutes vos questions concernant notre application et la communauté automobile.",
+  description: "Contact the GearConnect team for any questions about our app and the automotive community.",
   openGraph: {
-    title: "Contactez GearConnect - Le réseau social du sport automobile",
-    description: "Notre équipe est disponible pour répondre à vos questions et vous accompagner dans votre passion automobile.",
+    title: "Contact GearConnect - The Motorsport Social Network",
+    description: "Our team is available to answer your questions and support your automotive passion.",
     images: [{
       url: '/images/contact-og.jpg',
       width: 1200,

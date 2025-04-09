@@ -1,57 +1,57 @@
 import "../styles";
 
-// Importer les composants
+// Import components
 import FeaturesHero from "../components/feature/FeaturesHero";
 import FeatureSection from "../components/feature/FeatureSection";
 import FeaturesCta from "../components/feature/FeaturesCta";
 
 export default async function Features() {
-  // Contenu statique
+  // Static content
   const hero = {
-    title: "Découvrez GearConnect",
-    description: "Une plateforme complète pour les passionnés d'automobile"
+    title: "Discover GearConnect",
+    description: "A complete platform for automotive enthusiasts"
   };
   
   const events = {
-    title: "Événements",
-    description: "Restez informé des événements automobiles à venir dans votre région",
+    title: "Events",
+    description: "Stay informed about upcoming automotive events in your area",
     features: [
-      "Salons automobiles",
-      "Expositions de voitures classiques",
-      "Courses et rallyes",
-      "Rencontres de clubs"
+      "Auto shows",
+      "Classic car exhibitions",
+      "Races and rallies",
+      "Club meetings"
     ],
-    ctaText: "Explorer les événements"
+    ctaText: "Explore events"
   };
   
   const jobs = {
-    title: "Opportunités d'emploi",
-    description: "Trouvez votre prochain poste dans l'industrie automobile",
+    title: "Job Opportunities",
+    description: "Find your next position in the automotive industry",
     features: [
-      "Mécanicien",
-      "Vendeur",
-      "Design automobile",
-      "Ingénierie"
+      "Mechanic",
+      "Sales representative",
+      "Automotive design",
+      "Engineering"
     ],
-    ctaText: "Voir les offres"
+    ctaText: "View job listings"
   };
   
   const feed = {
-    title: "Fil d'actualité",
-    description: "Restez à jour avec les dernières nouvelles et tendances du monde automobile",
+    title: "News Feed",
+    description: "Stay up to date with the latest news and trends in the automotive world",
     features: [
-      "Actualités",
-      "Critiques de véhicules",
-      "Innovations technologiques",
-      "Conseils d'entretien"
+      "News",
+      "Vehicle reviews",
+      "Technological innovations",
+      "Maintenance tips"
     ],
-    ctaText: "Lire les dernières actualités"
+    ctaText: "Read the latest news"
   };
   
   const cta = {
-    title: "Prêt à rejoindre la communauté?",
-    description: "Téléchargez l'application GearConnect dès aujourd'hui et connectez-vous avec d'autres passionnés d'automobile.",
-    buttonText: "Télécharger maintenant"
+    title: "Ready to join the community?",
+    description: "Download the GearConnect app today and connect with other automotive enthusiasts.",
+    buttonText: "Download now"
   };
 
   return (
@@ -72,7 +72,7 @@ export default async function Features() {
             features={events.features}
             ctaText={events.ctaText}
             imageSrc="/images/events.jpg"
-            imageAlt="Événements automobiles"
+            imageAlt="Automotive events"
           />
 
           {/* Feature 2 - Jobs */}
@@ -82,18 +82,18 @@ export default async function Features() {
             features={jobs.features}
             ctaText={jobs.ctaText}
             imageSrc="/images/jobs.jpg"
-            imageAlt="Opportunités d'emploi automobile"
+            imageAlt="Automotive job opportunities"
             reverse={true}
           />
 
-          {/* Feature 3 - Fil d'actualité */}
+          {/* Feature 3 - News Feed */}
           <FeatureSection
             title={feed.title}
             description={feed.description}
             features={feed.features}
             ctaText={feed.ctaText}
             imageSrc="/images/filActu.jpg"
-            imageAlt="Fil d'actualité automobile"
+            imageAlt="Automotive news feed"
           />
         </div>
       </section>

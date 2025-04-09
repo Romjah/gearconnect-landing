@@ -23,28 +23,28 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gearconnect-landing.vercel.app'),
-  title: "GearConnect - Le réseau social du sport automobile",
-  description: "Partagez vos expériences sur circuit, échangez avec d'autres pilotes et vivez votre passion à fond ! Rejoignez la communauté GearConnect.",
-  keywords: "sport automobile, réseau social, racing, motorsport, événements automobiles, communauté pilotes, circuit automobile",
+  title: "GearConnect - The Motorsport Social Network",
+  description: "Share your track experiences, connect with other drivers, and live your passion to the fullest! Join the GearConnect community.",
+  keywords: "motorsport, social network, racing, automotive events, drivers community, race track",
   authors: [{ name: 'GearConnect Team' }],
   openGraph: {
-    title: "GearConnect - Le réseau social du sport automobile",
-    description: "Partagez vos expériences sur circuit, échangez avec d'autres pilotes et vivez votre passion à fond !",
+    title: "GearConnect - The Motorsport Social Network",
+    description: "Share your track experiences, connect with other drivers, and live your passion to the fullest!",
     url: 'https://gearconnect-landing.vercel.app',
     siteName: 'GearConnect',
-    locale: 'fr_FR',
+    locale: 'en_US',
     type: 'website',
     images: [{
       url: '/images/op-image.jpg',
       width: 1200,
       height: 630,
-      alt: 'GearConnect - La communauté du sport automobile',
+      alt: 'GearConnect - The Motorsport Community',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "GearConnect - Le réseau social du sport automobile",
-    description: "Partagez vos expériences sur circuit, échangez avec d'autres pilotes et vivez votre passion à fond !",
+    title: "GearConnect - The Motorsport Social Network",
+    description: "Share your track experiences, connect with other drivers, and live your passion to the fullest!",
     images: ['/images/op-image.jpg'],
   },
   alternates: {
@@ -69,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

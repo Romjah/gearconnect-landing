@@ -20,24 +20,24 @@ export default function ContactForm({ title, description, submitButtonText }: Co
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="firstName" className="block text-black font-medium mb-2">
-              Prénom
+              First Name
             </label>
             <input
               type="text"
               id="firstName"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-700 focus:border-indigo-700 text-black"
-              placeholder="Votre prénom"
+              placeholder="Your first name"
             />
           </div>
           <div>
             <label htmlFor="lastName" className="block text-black font-medium mb-2">
-              Nom
+              Last Name
             </label>
             <input
               type="text"
               id="lastName"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-700 focus:border-indigo-700 text-black"
-              placeholder="Votre nom"
+              placeholder="Your last name"
             />
           </div>
         </div>
@@ -50,36 +50,36 @@ export default function ContactForm({ title, description, submitButtonText }: Co
             type="email"
             id="email"
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-700 focus:border-indigo-700 text-black"
-            placeholder="votre@email.com"
+            placeholder="your@email.com"
           />
         </div>
         
         <div>
           <label htmlFor="vehicle" className="block text-black font-medium mb-2">
-            Votre véhicule (optionnel)
+            Your vehicle (optional)
           </label>
           <input
             type="text"
             id="vehicle"
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-700 focus:border-indigo-700 text-black"
-            placeholder="Marque, modèle et année"
+            placeholder="Make, model and year"
           />
         </div>
         
         <div>
           <label htmlFor="subject" className="block text-black font-medium mb-2">
-            Sujet
+            Subject
           </label>
           <select
             id="subject"
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-700 focus:border-indigo-700 bg-white text-black"
           >
-            <option value="">Sélectionnez un sujet</option>
-            <option value="support">Support technique</option>
-            <option value="feedback">Retour d&apos;expérience</option>
-            <option value="partnership">Proposition de partenariat</option>
-            <option value="events">Organisation d&apos;événements</option>
-            <option value="other">Autre</option>
+            <option value="">Select a subject</option>
+            <option value="support">Technical Support</option>
+            <option value="feedback">Feedback</option>
+            <option value="partnership">Partnership Proposal</option>
+            <option value="events">Event Organization</option>
+            <option value="other">Other</option>
           </select>
         </div>
         
@@ -91,7 +91,7 @@ export default function ContactForm({ title, description, submitButtonText }: Co
             id="message"
             rows={5}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-700 focus:border-indigo-700 text-black"
-            placeholder="Détaillez votre demande..."
+            placeholder="Describe your request in detail..."
           ></textarea>
         </div>
         
@@ -102,7 +102,7 @@ export default function ContactForm({ title, description, submitButtonText }: Co
             className="mt-1 h-4 w-4 focus:ring-indigo-700 border-gray-300 rounded text-black"
           />
           <label htmlFor="privacy" className="ml-2 block text-black">
-            J&apos;accepte que GearConnect utilise mes données conformément à la politique de confidentialité.
+            I agree that GearConnect may use my data in accordance with the privacy policy.
           </label>
         </div>
         
