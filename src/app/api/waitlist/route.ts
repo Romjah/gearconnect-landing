@@ -36,7 +36,9 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json(
-      { message: 'Successfully joined the waitlist!' },
+      { 
+        message: `Successfully joined the waitlist! We'll keep you updated at ${email}. For any questions, contact us at ${CONTACT_EMAIL}.`
+      },
       { status: 200 }
     );
   } catch (error) {
