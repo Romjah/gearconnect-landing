@@ -37,28 +37,15 @@ export default function Footer() {
           
           <div>
             <h3 className="text-lg font-semibold mb-4">Community</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/features#feed" className="text-black hover:text-indigo-700">
-                  News Feed
-                </Link>
-              </li>
-              <li>
-                <Link href="/features#events" className="text-black hover:text-indigo-700">
-                  Events
-                </Link>
-              </li>
-              <li>
-                <Link href="/features#groups" className="text-black hover:text-indigo-700">
-                  Enthusiast Groups
-                </Link>
-              </li>
-              <li>
-                <Link href="/features#jobs" className="text-black hover:text-indigo-700">
-                  Automotive Jobs
-                </Link>
-              </li>
-            </ul>
+            <div className="space-y-2">
+              <h3 className="text-sm font-semibold text-gray-900">Features</h3>
+              <Link href="/features#events" className="text-black hover:text-indigo-700">
+                Events
+              </Link>
+              <Link href="/features#feed" className="text-black hover:text-indigo-700">
+                News Feed
+              </Link>
+            </div>
           </div>
           
           <div>

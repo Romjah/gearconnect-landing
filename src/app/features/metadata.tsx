@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Features - GearConnect",
-  description: "Discover all the features of GearConnect, the social network dedicated to automotive enthusiasts.",
+  title: "Features | GearConnect",
+  description: "Discover events and discussions between automotive enthusiasts.",
   openGraph: {
     title: "GearConnect Features - The Motorsport Social Network",
     description: "Discover events, job opportunities, and discussions between automotive enthusiasts.",

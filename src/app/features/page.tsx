@@ -24,18 +24,6 @@ export default async function Features() {
     ctaText: "Explore events"
   };
   
-  const jobs = {
-    title: "Job Opportunities",
-    description: "Find your next position in the automotive industry",
-    features: [
-      "Mechanic",
-      "Sales representative",
-      "Automotive design",
-      "Engineering"
-    ],
-    ctaText: "View job listings"
-  };
-  
   const feed = {
     title: "News Feed",
     description: "Stay up to date with the latest news and trends in the automotive world",
@@ -75,18 +63,7 @@ export default async function Features() {
             imageAlt="Automotive events"
           />
 
-          {/* Feature 2 - Jobs */}
-          <FeatureSection
-            title={jobs.title}
-            description={jobs.description}
-            features={jobs.features}
-            ctaText={jobs.ctaText}
-            imageSrc="/images/jobs.jpg"
-            imageAlt="Automotive job opportunities"
-            reverse={true}
-          />
-
-          {/* Feature 3 - News Feed */}
+          {/* Feature 2 - News Feed */}
           <FeatureSection
             title={feed.title}
             description={feed.description}
@@ -94,6 +71,7 @@ export default async function Features() {
             ctaText={feed.ctaText}
             imageSrc="/images/filActu.jpg"
             imageAlt="Automotive news feed"
+            reverse={true}
           />
         </div>
       </section>
