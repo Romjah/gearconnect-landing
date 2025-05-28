@@ -22,7 +22,7 @@ export default async function Contact() {
     description: "Multiple ways to reach us",
     email: {
       title: "Email",
-      address: "contact@gearconnect.com",
+      address: "contact@gearconnect.fr",
       description: "Our team responds within 24 hours"
     },
     phone: {

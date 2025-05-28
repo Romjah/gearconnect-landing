@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-const CONTACT_EMAIL = 'contact@gearconnect.com';
+const CONTACT_EMAIL = 'contact@gearconnect.fr';
 
 export async function POST(request: Request) {
   try {
