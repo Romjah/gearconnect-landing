@@ -23,13 +23,13 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gearconnect-landing.vercel.app'),
-  title: "GearConnect - The Motorsport Social Network",
-  description: "Share your track experiences, connect with other drivers, and live your passion to the fullest! Join the GearConnect community.",
-  keywords: "motorsport, social network, racing, automotive events, drivers community, race track",
+  title: "GearConnect - Career Acceleration Platform for Racing Pilots",
+  description: "Transform your racing talent into professional opportunities with smart analytics and strategic networking. The first career acceleration platform designed specifically for ambitious pilots.",
+  keywords: "career acceleration, racing pilots, motorsport analytics, professional racing, pilot development, racing careers, motorsport networking, performance analytics",
   authors: [{ name: 'GearConnect Team' }],
   openGraph: {
-    title: "GearConnect - The Motorsport Social Network",
-    description: "Share your track experiences, connect with other drivers, and live your passion to the fullest!",
+    title: "GearConnect - Career Acceleration Platform for Racing Pilots",
+    description: "Transform your racing talent into professional opportunities with smart analytics and strategic networking.",
     url: 'https://gearconnect-landing.vercel.app',
     siteName: 'GearConnect',
     locale: 'en_US',
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
       url: '/images/op-image.jpg',
       width: 1200,
       height: 630,
-      alt: 'GearConnect - The Motorsport Community',
+      alt: 'GearConnect - Career Acceleration Platform for Racing Pilots',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "GearConnect - The Motorsport Social Network",
-    description: "Share your track experiences, connect with other drivers, and live your passion to the fullest!",
+    title: "GearConnect - Career Acceleration Platform for Racing Pilots",
+    description: "Transform your racing talent into professional opportunities with smart analytics and strategic networking.",
     images: ['/images/op-image.jpg'],
   },
   alternates: {

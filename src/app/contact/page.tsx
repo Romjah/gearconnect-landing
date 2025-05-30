@@ -46,23 +46,31 @@ export default async function Contact() {
   };
 
   const faq = {
-    title: "Frequently Asked Questions",
+    title: "Alpha Program FAQ",
     items: [
       {
-        question: "How do I download the GearConnect app?",
-        answer: "The GearConnect app is available on the App Store and Google Play. You can download it by visiting our download page."
+        question: "What is the GearConnect Alpha program?",
+        answer: "The Alpha program is an exclusive community where racing pilots help us build the first career acceleration platform for motorsport. Alpha members get early access to features and help shape the platform's development."
       },
       {
-        question: "Is the app free to use?",
-        answer: "Yes, the GearConnect app is completely free to download and use. Premium features are available through monthly or annual subscriptions."
+        question: "How does the Alpha program work?",
+        answer: "As an Alpha member, you'll test early features, provide feedback, and help us understand what pilots need most. We're building the platform together based on real user input and racing community insights."
       },
       {
-        question: "How can I report a technical issue?",
-        answer: "You can report technical issues using the contact form on this page or directly from the app in the 'Help' section."
+        question: "When will the full platform launch?",
+        answer: "We're focused on building the right features during the Alpha phase. The timeline depends on community feedback and development progress. Alpha members will be the first to access the full platform when it's ready."
+      },
+      {
+        question: "Is the Alpha program free?",
+        answer: "Yes, the Alpha program is completely free. We're looking for dedicated pilots who want to help build the future of racing career development, not paying customers at this stage."
+      },
+      {
+        question: "How can I provide feedback during Alpha?",
+        answer: "You can share feedback using the contact form on this page, through our community channels, or directly with our development team. Your input directly influences what we build next."
       }
     ],
-    ctaText: "Have more questions?",
-    ctaButtonText: "Contact Us"
+    ctaText: "Ready to join the Alpha community?",
+    ctaButtonText: "Join Alpha Program"
   };
 
   return (

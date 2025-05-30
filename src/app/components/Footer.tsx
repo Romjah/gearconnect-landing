@@ -10,40 +10,40 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">GearConnect</h3>
             <p className="text-black text-sm">
-              The social network connecting automotive enthusiasts from around the world.
+              The first career acceleration platform for racing pilots. Transform your talent into professional opportunities through smart analytics and strategic networking.
             </p>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Access</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/" className="text-black hover:text-indigo-700">
-                  Home
+                  Career Platform
                 </Link>
               </li>
               <li>
                 <Link href="/features" className="text-black hover:text-indigo-700">
-                  Features
+                  How It Works
                 </Link>
               </li>
               <li>
-                <Link href="/download" className="text-black hover:text-indigo-700">
-                  Download
+                <Link href="/#waitlist" className="text-black hover:text-indigo-700">
+                  Join Alpha Program
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Community</h3>
+            <h3 className="text-lg font-semibold mb-4">Career Tools</h3>
             <div className="space-y-2">
-              <h3 className="text-sm font-semibold text-gray-900">Features</h3>
-              <Link href="/features#events" className="text-black hover:text-indigo-700">
-                Events
+              <h3 className="text-sm font-semibold text-gray-900">Alpha Features</h3>
+              <Link href="/features#analytics" className="text-black hover:text-indigo-700">
+                Performance Analytics
               </Link>
-              <Link href="/features#feed" className="text-black hover:text-indigo-700">
-                News Feed
+              <Link href="/features#networking" className="text-black hover:text-indigo-700">
+                Strategic Networking
               </Link>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="text-black">
-                contact@gearconnect.fr
+                careers@gearconnect.fr
               </li>
             </ul>
             <div className="mt-4 flex space-x-4">

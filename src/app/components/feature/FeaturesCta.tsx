@@ -19,7 +19,7 @@ export default function FeaturesCta({ title, description, buttonText }: FeatureC
         </p>
         <div className="features-cta-button-container">
           <Link
-            href="/download"
+            href="/#waitlist"
             className="features-cta-button"
           >
             {buttonText}

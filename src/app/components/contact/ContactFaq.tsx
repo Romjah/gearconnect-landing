@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 interface FaqItem {
   question: string;
@@ -39,12 +40,12 @@ export default function ContactFaq({ title, faqItems, ctaText, ctaButtonText }: 
           <p className="text-lg text-black mb-4">
             {ctaText}
           </p>
-          <a
-            href="#"
+          <Link
+            href="/#waitlist"
             className="inline-flex items-center bg-indigo-700 text-white hover:bg-indigo-800 py-3 px-8 rounded-lg font-medium shadow-md"
           >
             {ctaButtonText}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
