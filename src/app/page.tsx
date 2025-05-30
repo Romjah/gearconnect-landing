@@ -92,154 +92,140 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-700 to-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
-                Connect with motorsport enthusiasts
-              </h1>
-              <p className="text-xl mb-8 text-indigo-100">
-                GearConnect, the first social network dedicated to motorsport enthusiasts. Share your track experiences, discover events, and connect with other passionate drivers!
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-4">
+            <span className="bg-yellow-400 text-indigo-900 px-3 py-1 rounded-full text-sm font-semibold">
+              🚀 Alpha Version Coming Soon
+            </span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
+            Get discovered by the right people through your performances
+          </h1>
+          <p className="text-xl mb-8 text-indigo-100">
+            GearConnect Alpha - The platform we're building where your track performances will get you noticed by teams, sponsors, and mentors. Join us to help create the tracking system that will showcase talent to the motorsport community.
+          </p>
+          <div id="waitlist" className="mb-8 bg-white/10 rounded-lg p-6 backdrop-blur-sm">
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-lg font-medium">Join the Alpha Program</span>
+              <span className="text-lg font-bold">
+                {isLoading ? "..." : `${waitlistCount}/${TARGET_COUNT}`}
+              </span>
+            </div>
+            <div className="w-full bg-white/20 rounded-full h-2.5 mb-4">
+              <div 
+                className="bg-white h-2.5 rounded-full transition-all duration-500" 
+                style={{ width: `${progressPercentage}%` }}
+              ></div>
+            </div>
+            <p className="text-sm mb-4 text-indigo-100">
+              Join the community where your performances get noticed by industry professionals who can fast-track your racing career.
+            </p>
+            <form onSubmit={handleSubmit} className="space-y-3">
+              <div>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  disabled={status === "loading"}
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="w-full bg-white text-indigo-700 hover:bg-indigo-50 py-2 px-4 rounded-lg font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {status === "loading" ? "Joining..." : "Accelerate My Career"}
+              </button>
+            </form>
+            {message && (
+              <p className={`text-sm mt-3 ${status === "error" ? "text-red-300" : "text-green-300"}`}>
+                {message}
               </p>
-              <div className="mb-8 bg-white/10 rounded-lg p-6 backdrop-blur-sm">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-lg font-medium">Join the Waitlist</span>
-                  <span className="text-lg font-bold">
-                    {isLoading ? "..." : `${waitlistCount}/${TARGET_COUNT}`}
-                  </span>
-                </div>
-                <div className="w-full bg-white/20 rounded-full h-2.5 mb-4">
-                  <div 
-                    className="bg-white h-2.5 rounded-full transition-all duration-500" 
-                    style={{ width: `${progressPercentage}%` }}
-                  ></div>
-                </div>
-                <p className="text-sm mb-4 text-indigo-100">
-                  Be among the first to join and unlock exclusive features when we launch!
-                </p>
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  <div>
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter your email"
-                      className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
-                      disabled={status === "loading"}
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={status === "loading"}
-                    className="w-full bg-white text-indigo-700 hover:bg-indigo-50 py-2 px-4 rounded-lg font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {status === "loading" ? "Joining..." : "Join Waitlist"}
-                  </button>
-                </form>
-                {message && (
-                  <p className={`text-sm mt-3 ${status === "error" ? "text-red-300" : "text-green-300"}`}>
-                    {message}
-                  </p>
-                )}
-                <p className="text-xs mt-3 text-indigo-100/80">
-                  We&apos;ll notify you when we launch and you&apos;ll get early access to all features.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link 
-                  href="/download" 
-                  className="bg-white text-indigo-700 hover:bg-indigo-50 py-3 px-6 rounded-lg font-medium text-center shadow-md"
-                >
-                  Download the app
-                </Link>
-                <Link 
-                  href="/features" 
-                  className="bg-transparent hover:bg-indigo-800 border border-white py-3 px-6 rounded-lg font-medium text-center"
-                >
-                  Discover features
-                </Link>
-              </div>
-            </div>
-            <div className="md:w-1/2">
-              <div className="relative h-80 w-full md:h-96 md:w-96 mx-auto">
-                <div className="absolute inset-0 bg-white/10 rounded-xl backdrop-blur-md shadow-xl p-4">
-                  <div className="h-full w-full bg-gradient-to-tr from-indigo-800/80 to-blue-800/80 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl font-bold">GearConnect App</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            )}
+            <p className="text-xs mt-3 text-indigo-100/80">
+              Alpha members get their performances showcased to teams, sponsors, and mentors looking for new talent.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <Link 
+              href="/features" 
+              className="bg-white text-indigo-700 hover:bg-indigo-50 py-3 px-6 rounded-lg font-medium text-center shadow-md"
+            >
+              See How It Works
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Alpha Features Vision */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Main Features</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">What We're Building Together</h2>
             <p className="text-lg text-black max-w-3xl mx-auto">
-              Discover how GearConnect redefines the automotive social experience
+              Join our alpha community to help shape the platform that will connect talented pilots with teams, sponsors, and mentors actively looking for new talent
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Feature 1 */}
+            {/* Feature 1 - Performance Visibility */}
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
               <div className="bg-indigo-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-5">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-indigo-700">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-black">News Feed</h3>
+              <h3 className="text-xl font-semibold mb-3 text-black">Performance Tracking Vision</h3>
               <p className="text-black">
-                Exchange and share your passions in a news feed dedicated to automotive enthusiasts.
+                We'll develop a tracking system that automatically highlights your best performances, improvements, and achievements to make you visible to industry professionals scouting for talent.
               </p>
             </div>
             
-            {/* Feature 2 */}
+            {/* Feature 2 - Community Discovery */}
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
               <div className="bg-indigo-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-5">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-indigo-700">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-black">Automotive Events</h3>
+              <h3 className="text-xl font-semibold mb-3 text-black">Industry Network Building</h3>
               <p className="text-black">
-                Discover and participate in events near you to meet other enthusiasts.
+                We're building connections with teams, sponsors, and mentors who want to discover rising talents. Alpha members will help us create the community feed and performance discovery systems.
               </p>
             </div>
           </div>
         </div>
       </section>
       
-      {/* How It Works Section */}
+      {/* Alpha Development Roadmap */}
       <section className="py-20 bg-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Alpha Development Roadmap</h2>
             <p className="text-lg text-black max-w-3xl mx-auto">
-              A few simple steps to join the GearConnect community
+              Here's how we'll build the career acceleration platform together during the alpha phase
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center bg-white p-8 rounded-xl shadow-lg">
-              <div className="bg-indigo-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
-              <h3 className="text-xl font-semibold mb-2 text-black">Download the app</h3>
-              <p className="text-black">Available on iOS and Android, download the GearConnect app for free.</p>
+              <div className="bg-yellow-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">🏁</div>
+              <h3 className="text-xl font-semibold mb-2 text-black">Performance Tracking</h3>
+              <p className="text-black">We'll develop systems to automatically capture and highlight your best lap times, improvements, and standout performances.</p>
             </div>
             
             <div className="text-center bg-white p-8 rounded-xl shadow-lg">
-              <div className="bg-indigo-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
-              <h3 className="text-xl font-semibold mb-2 text-black">Create your profile</h3>
-              <p className="text-black">Customize your profile with your interests and favorite vehicles for a tailored experience.</p>
+              <div className="bg-indigo-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">👁️</div>
+              <h3 className="text-xl font-semibold mb-2 text-black">Discovery Network</h3>
+              <p className="text-black">Build a community where teams, sponsors, and mentors can follow and discover emerging talent through performance feeds and rankings.</p>
             </div>
             
             <div className="text-center bg-white p-8 rounded-xl shadow-lg">
-              <div className="bg-indigo-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
-              <h3 className="text-xl font-semibold mb-2 text-black">Connect with others</h3>
-              <p className="text-black">Start interacting with the community, share photos, and join events.</p>
+              <div className="bg-indigo-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">🚀</div>
+              <h3 className="text-xl font-semibold mb-2 text-black">Career Acceleration</h3>
+              <p className="text-black">Create the connections and visibility needed for industry professionals to reach out with sponsorship deals, team positions, and mentorship opportunities.</p>
             </div>
           </div>
         </div>
@@ -250,32 +236,52 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-indigo-700 to-blue-700 rounded-2xl shadow-xl overflow-hidden">
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/2 p-12 text-white">
-                <h2 className="text-3xl font-bold mb-6">Ready to join the automotive community?</h2>
+              <div className="md:w-2/3 p-12 text-white">
+                <h2 className="text-3xl font-bold mb-6">Ready to help build the future of racing careers?</h2>
                 <p className="text-indigo-100 mb-8">
-                  Download GearConnect now and connect with thousands of automotive enthusiasts.
+                  Join our exclusive alpha community where we're building the platform that will get track performances noticed by teams, sponsors, and mentors. Help us create the visibility system that racing talent deserves.
                 </p>
-                <Link 
-                  href="/download" 
-                  className="inline-block bg-white text-indigo-700 hover:bg-indigo-50 py-3 px-6 rounded-lg font-medium shadow-md"
-                >
-                  Download for free
-                </Link>
+                <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                  <Link
+                    href="/#waitlist"
+                    className="bg-white text-indigo-700 hover:bg-indigo-50 py-3 px-6 rounded-lg font-medium shadow-md text-center"
+                  >
+                    Join Alpha Program
+                  </Link>
+                  <Link 
+                    href="/features" 
+                    className="bg-transparent hover:bg-indigo-800 border border-white py-3 px-6 rounded-lg font-medium text-center"
+                  >
+                    See How It Works
+                  </Link>
+                </div>
               </div>
-              <div className="md:w-1/2 p-12 bg-white">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">What our users say</h3>
-                <div className="space-y-6">
-                  <div className="border-l-4 border-indigo-700 pl-4 py-2">
-                    <p className="italic text-black mb-2">
-                      &quot;GearConnect allowed me to meet other BMW M3 enthusiasts in my area. A true community of passionate people!&quot;
-                    </p>
-                    <p className="text-gray-900 font-medium">- Tom L., Collector</p>
+              <div className="md:w-1/3 p-12 bg-indigo-800/30">
+                <h3 className="text-xl font-bold text-white mb-4">Who We're Inviting</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="bg-white/20 rounded-full p-1 mt-1">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <p className="text-indigo-100 text-sm">Racing team managers seeking new talent</p>
                   </div>
-                  <div className="border-l-4 border-indigo-700 pl-4 py-2">
-                    <p className="italic text-black mb-2">
-                      &quot;I discovered amazing car meets thanks to GearConnect. The best social network for car enthusiasts.&quot;
-                    </p>
-                    <p className="text-gray-900 font-medium">- Mary D., Amateur Driver</p>
+                  <div className="flex items-start space-x-3">
+                    <div className="bg-white/20 rounded-full p-1 mt-1">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <p className="text-indigo-100 text-sm">Sponsors interested in supporting emerging pilots</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="bg-white/20 rounded-full p-1 mt-1">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <p className="text-indigo-100 text-sm">Experienced mentors ready to guide new talent</p>
                   </div>
                 </div>
               </div>

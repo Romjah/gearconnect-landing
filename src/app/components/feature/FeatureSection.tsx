@@ -45,7 +45,7 @@ export default function FeatureSection({
             </li>
           ))}
         </ul>
-        <Link href="/download" className="feature-cta">
+        <Link href="/#waitlist" className="feature-cta">
           {ctaText}
         </Link>
       </div>
