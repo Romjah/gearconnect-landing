@@ -28,8 +28,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/faq" className="text-black hover:text-indigo-700">
+                  FAQ
+                </Link>
+              </li>
+              <li>
                 <Link href="/#waitlist" className="text-black hover:text-indigo-700">
-                  Join Alpha Program
+                  Join Early Access Program
                 </Link>
               </li>
             </ul>
@@ -38,7 +43,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Career Tools</h3>
             <div className="space-y-2">
-              <h3 className="text-sm font-semibold text-gray-900">Alpha Features</h3>
+              <h3 className="text-sm font-semibold text-gray-900">Platform Features</h3>
               <Link href="/features#analytics" className="text-black hover:text-indigo-700">
                 Performance Analytics
               </Link>

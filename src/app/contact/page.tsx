@@ -46,31 +46,31 @@ export default async function Contact() {
   };
 
   const faq = {
-    title: "Alpha Program FAQ",
+    title: "Program FAQ",
     items: [
       {
-        question: "What is the GearConnect Alpha program?",
-        answer: "The Alpha program is an exclusive community where racing pilots help us build the first career acceleration platform for motorsport. Alpha members get early access to features and help shape the platform's development."
+        question: "What is the GearConnect program?",
+        answer: "Our program is an exclusive community where racing pilots help us build the first career acceleration platform for motorsport. Members get early access to features and help shape the platform's development."
       },
       {
-        question: "How does the Alpha program work?",
-        answer: "As an Alpha member, you'll test early features, provide feedback, and help us understand what pilots need most. We're building the platform together based on real user input and racing community insights."
+        question: "How does the program work?",
+        answer: "As a member, you'll test early features, provide feedback, and help us understand what pilots need most. We're building the platform together based on real user input and racing community insights."
       },
       {
         question: "When will the full platform launch?",
-        answer: "We're focused on building the right features during the Alpha phase. The timeline depends on community feedback and development progress. Alpha members will be the first to access the full platform when it's ready."
+        answer: "We're focused on building the right features. The timeline depends on community feedback and development progress. Members will be the first to access the full platform when it's ready."
       },
       {
-        question: "Is the Alpha program free?",
-        answer: "Yes, the Alpha program is completely free. We're looking for dedicated pilots who want to help build the future of racing career development, not paying customers at this stage."
+        question: "Is the program free?",
+        answer: "Yes, the program is completely free. We're looking for dedicated pilots who want to help build the future of racing career development, not paying customers at this stage."
       },
       {
-        question: "How can I provide feedback during Alpha?",
+        question: "How can I provide feedback?",
         answer: "You can share feedback using the contact form on this page, through our community channels, or directly with our development team. Your input directly influences what we build next."
       }
     ],
-    ctaText: "Ready to join the Alpha community?",
-    ctaButtonText: "Join Alpha Program"
+    ctaText: "Ready to join the community?",
+    ctaButtonText: "Join Early Access Program"
   };
 
   return (
