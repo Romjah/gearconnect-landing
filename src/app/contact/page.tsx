@@ -25,21 +25,6 @@ export default async function Contact() {
       address: "contact@gearconnect.fr",
       description: "Our team responds within 24 hours"
     },
-    phone: {
-      title: "Phone",
-      number: "+1 (555) 123-4567",
-      description: "Monday to Friday, 9am-6pm"
-    },
-    address: {
-      title: "Address",
-      line1: "123 Automotive Drive",
-      line2: "Detroit, MI 48201, USA"
-    },
-    hours: {
-      title: "Hours",
-      line1: "Monday-Friday: 9am-6pm",
-      line2: "Saturday: 10am-4pm"
-    },
     social: {
       title: "Social Media"
     }
@@ -95,9 +80,6 @@ export default async function Contact() {
               title={info.title}
               description={info.description}
               email={info.email}
-              phone={info.phone}
-              address={info.address}
-              hours={info.hours}
               social={info.social}
             />
           </div>
