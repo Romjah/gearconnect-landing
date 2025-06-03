@@ -50,7 +50,7 @@ export default function ContactForm({ title, description, submitButtonText }: Co
             type="email"
             id="email"
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-700 focus:border-indigo-700 text-black"
-            placeholder="your@email.com"
+            placeholder="contact@gearconnect.fr"
           />
         </div>
         

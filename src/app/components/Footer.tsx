@@ -62,7 +62,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="text-black">
-                careers@gearconnect.fr
+                contact@gearconnect.fr
               </li>
             </ul>
             <div className="mt-4 flex space-x-4">
