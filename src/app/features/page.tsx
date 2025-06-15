@@ -99,7 +99,7 @@ export default async function Features() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We're building the future of racing career development. Join our community to help shape a platform that gives talented pilots the visibility they deserve.
+              We&apos;re building the future of racing career development. Join our community to help shape a platform that gives talented pilots the visibility they deserve.
             </p>
           </div>
           
@@ -113,13 +113,13 @@ export default async function Features() {
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <div className="bg-indigo-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">🚀</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Exclusive Access</h3>
-              <p className="text-gray-600">Community members get exclusive access to features and help shape the platform's development based on real pilot needs.</p>
+              <p className="text-gray-600">Community members get exclusive access to features and help shape the platform&apos;s development based on real pilot needs.</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <div className="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">🤝</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Community First</h3>
-              <p className="text-gray-600">We're starting with a focused community of dedicated pilots and industry professionals who believe in merit-based discovery.</p>
+              <p className="text-gray-600">We&apos;re starting with a focused community of dedicated pilots and industry professionals who believe in merit-based discovery.</p>
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default async function Features() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Development Roadmap</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Here's what we're building together to create the future of racing career discovery
+              Here&apos;s what we&apos;re building together to create the future of racing career discovery
             </p>
           </div>
           
@@ -139,7 +139,7 @@ export default async function Features() {
             <div className="text-center">
               <div className="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center text-indigo-700 font-bold mx-auto mb-4">1</div>
               <h3 className="font-semibold text-gray-900 mb-2">Performance Tracking</h3>
-              <p className="text-sm text-gray-600">We'll develop systems to make it quick and intuitive for you to log and highlight your best racing performances</p>
+              <p className="text-sm text-gray-600">We&apos;ll develop systems to make it quick and intuitive for you to log and highlight your best racing performances</p>
             </div>
             
             <div className="text-center">
