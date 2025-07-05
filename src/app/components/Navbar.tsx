@@ -7,7 +7,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg fixed w-full z-10 border-b border-gray-200">
+    <nav className="bg-white shadow-lg fixed w-full z-50 border-b border-gray-200 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -65,7 +65,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="sm:hidden bg-white border-t border-gray-200">
+        <div className="sm:hidden bg-white border-t border-gray-200 relative z-50">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link href="/" className="block px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-200">
               Home
